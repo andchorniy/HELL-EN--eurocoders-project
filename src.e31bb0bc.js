@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+},{"./../images/registration/registration320.png":[["registration320.2497e1fe.png","images/registration/registration320.png"],"images/registration/registration320.png"],"./../images/registration/registration320@2x.png":[["registration320@2x.01d0f76a.png","images/registration/registration320@2x.png"],"images/registration/registration320@2x.png"],"./../images/registration/registration768.png":[["registration768.cb0eb353.png","images/registration/registration768.png"],"images/registration/registration768.png"],"./../images/registration/registration768@2x.png":[["registration768@2x.a6092d0a.png","images/registration/registration768@2x.png"],"images/registration/registration768@2x.png"],"./../images/registration/registration1680.png":[["registration1680.9942e2c0.png","images/registration/registration1680.png"],"images/registration/registration1680.png"],"./../images/registration/registration1680@2x.png":[["registration1680@2x.d1ee226f.png","images/registration/registration1680@2x.png"],"images/registration/registration1680@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -221,7 +221,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54050" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58382" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
