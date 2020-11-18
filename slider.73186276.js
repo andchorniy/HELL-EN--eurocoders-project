@@ -117,83 +117,26 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\hero\\ellipse-1.png":[["ellipse-1.047fc305.png","images/hero/ellipse-1.png"],"images/hero/ellipse-1.png"],"./..\\images\\hero\\ellipse-2.png":[["ellipse-2.88cef74b.png","images/hero/ellipse-2.png"],"images/hero/ellipse-2.png"],"./..\\images\\hero\\wave.png":[["wave.8e5e69c3.png","images/hero/wave.png"],"images/hero/wave.png"],"./..\\images\\hero\\ellipse-1-x2.png":[["ellipse-1-x2.473be15b.png","images/hero/ellipse-1-x2.png"],"images/hero/ellipse-1-x2.png"],"./..\\images\\hero\\ellipse-2-x2.png":[["ellipse-2-x2.69317879.png","images/hero/ellipse-2-x2.png"],"images/hero/ellipse-2-x2.png"],"./..\\images\\hero\\wave-x2.png":[["wave-x2.cba08f2c.png","images/hero/wave-x2.png"],"images/hero/wave-x2.png"],"./..\\images\\hero\\ellipse-1-tablet.png":[["ellipse-1-tablet.05e99ba3.png","images/hero/ellipse-1-tablet.png"],"images/hero/ellipse-1-tablet.png"],"./..\\images\\hero\\ellipse-2-tablet.png":[["ellipse-2-tablet.ffca95de.png","images/hero/ellipse-2-tablet.png"],"images/hero/ellipse-2-tablet.png"],"./..\\images\\hero\\wave-tablet.png":[["wave-tablet.b4a6bcdc.png","images/hero/wave-tablet.png"],"images/hero/wave-tablet.png"],"./..\\images\\hero\\ellipse-1-tablet-x2.png":[["ellipse-1-tablet-x2.3a5fee35.png","images/hero/ellipse-1-tablet-x2.png"],"images/hero/ellipse-1-tablet-x2.png"],"./..\\images\\hero\\ellipse-2-tablet-x2.png":[["ellipse-2-tablet-x2.a6bd907c.png","images/hero/ellipse-2-tablet-x2.png"],"images/hero/ellipse-2-tablet-x2.png"],"./..\\images\\hero\\wave-tablet-x2.png":[["wave-tablet-x2.2ece55f1.png","images/hero/wave-tablet-x2.png"],"images/hero/wave-tablet-x2.png"],"./..\\images\\hero\\ellipse-1-desktop.png":[["ellipse-1-desktop.1c05456b.png","images/hero/ellipse-1-desktop.png"],"images/hero/ellipse-1-desktop.png"],"./..\\images\\hero\\ellipse-2-desktop.png":[["ellipse-2-desktop.410288be.png","images/hero/ellipse-2-desktop.png"],"images/hero/ellipse-2-desktop.png"],"./..\\images\\hero\\wave-desktop.png":[["wave-desktop.969dfc55.png","images/hero/wave-desktop.png"],"images/hero/wave-desktop.png"],"./..\\images\\hero\\ellipse-1-desktop-x2.png":[["ellipse-1-desktop-x2.a13c411e.png","images/hero/ellipse-1-desktop-x2.png"],"images/hero/ellipse-1-desktop-x2.png"],"./..\\images\\hero\\ellipse-2-desktop-x2.png":[["ellipse-2-desktop-x2.b854fef7.png","images/hero/ellipse-2-desktop-x2.png"],"images/hero/ellipse-2-desktop-x2.png"],"./..\\images\\hero\\wave-desktop-x2.png":[["wave-desktop-x2.3051600a.png","images/hero/wave-desktop-x2.png"],"images/hero/wave-desktop-x2.png"],"./..\\images\\svg\\Campfire.svg":[["Campfire.0cc14651.svg","images/svg/Campfire.svg"],"images/svg/Campfire.svg"],"./..\\images\\bg-our-program-mobile.jpg":[["bg-our-program-mobile.de5fa7f5.jpg","images/bg-our-program-mobile.jpg"],"images/bg-our-program-mobile.jpg"],"./..\\images\\bg-our-program-mobile@2x.jpg":[["bg-our-program-mobile@2x.9e8f997e.jpg","images/bg-our-program-mobile@2x.jpg"],"images/bg-our-program-mobile@2x.jpg"],"./..\\images\\bg-our-program-tablet.jpg":[["bg-our-program-tablet.97a67db2.jpg","images/bg-our-program-tablet.jpg"],"images/bg-our-program-tablet.jpg"],"./..\\images\\bg-our-program-tablet@2x.jpg":[["bg-our-program-tablet@2x.64d49dfe.jpg","images/bg-our-program-tablet@2x.jpg"],"images/bg-our-program-tablet@2x.jpg"],"./..\\images\\bg-our-program-desktop.jpg":[["bg-our-program-desktop.d6de6956.jpg","images/bg-our-program-desktop.jpg"],"images/bg-our-program-desktop.jpg"],"./..\\images\\bg-our-program-desktop@2x.jpg":[["bg-our-program-desktop@2x.ebb21e82.jpg","images/bg-our-program-desktop@2x.jpg"],"images/bg-our-program-desktop@2x.jpg"],"./..\\images\\students-reviews\\student-1.jpg":[["student-1.24f22845.jpg","images/students-reviews/student-1.jpg"],"images/students-reviews/student-1.jpg"],"./..\\images\\students-reviews\\student-2.jpg":[["student-2.f962828e.jpg","images/students-reviews/student-2.jpg"],"images/students-reviews/student-2.jpg"],"./..\\images\\students-reviews\\student-3.jpg":[["student-3.f3ecb91d.jpg","images/students-reviews/student-3.jpg"],"images/students-reviews/student-3.jpg"],"./..\\images\\students-reviews\\student-4.jpg":[["student-4.692b78cc.jpg","images/students-reviews/student-4.jpg"],"images/students-reviews/student-4.jpg"],"./..\\images\\students-reviews\\student-5.jpg":[["student-5.72cd347b.jpg","images/students-reviews/student-5.jpg"],"images/students-reviews/student-5.jpg"],"./..\\images\\students-reviews\\student-6.jpg":[["student-6.7bfada91.jpg","images/students-reviews/student-6.jpg"],"images/students-reviews/student-6.jpg"],"./..\\images\\students-reviews\\student-7.jpg":[["student-7.afb1e615.jpg","images/students-reviews/student-7.jpg"],"images/students-reviews/student-7.jpg"],"./..\\images\\students-reviews\\Arrow-prev.svg":[["Arrow-prev.33460a71.svg","images/students-reviews/Arrow-prev.svg"],"images/students-reviews/Arrow-prev.svg"],"./..\\images\\students-reviews\\Arrow-next.svg":[["Arrow-next.fbd30b2f.svg","images/students-reviews/Arrow-next.svg"],"images/students-reviews/Arrow-next.svg"],"./..\\images\\registration\\registration320.png":[["registration320.2497e1fe.png","images/registration/registration320.png"],"images/registration/registration320.png"],"./..\\images\\registration\\registration320@2x.png":[["registration320@2x.01d0f76a.png","images/registration/registration320@2x.png"],"images/registration/registration320@2x.png"],"./..\\images\\registration\\registration768.png":[["registration768.cb0eb353.png","images/registration/registration768.png"],"images/registration/registration768.png"],"./..\\images\\registration\\registration768@2x.png":[["registration768@2x.a6092d0a.png","images/registration/registration768@2x.png"],"images/registration/registration768@2x.png"],"./..\\images\\registration\\registration1680.png":[["registration1680.9942e2c0.png","images/registration/registration1680.png"],"images/registration/registration1680.png"],"./..\\images\\registration\\registration1680@2x.png":[["registration1680@2x.d1ee226f.png","images/registration/registration1680@2x.png"],"images/registration/registration1680@2x.png"],"./..\\images\\svg\\icon-instagram.svg":[["icon-instagram.4e76c36d.svg","images/svg/icon-instagram.svg"],"images/svg/icon-instagram.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"slider-js/slider.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $('.slider').slick({
+    dots: true,
+    autoplay: true,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    slidesToShow: 1,
+    centerMode: true,
+    waitForAnimate: false,
+    focusOnSelect: true,
+    fade: true,
+    appendDots: $('.thumbnail'),
+    responsive: [{
+      breakpoint: 320,
+      settings: {}
+    }]
+  });
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +340,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","slider-js/slider.js"], null)
+//# sourceMappingURL=/slider.73186276.js.map
