@@ -1,6 +1,7 @@
 .tutor {
   padding-top: 270px;
   padding-bottom: 25px;
+  scroll-margin-top: -180px;
 
   &__title {
     margin: 0 auto 20px;
@@ -33,9 +34,7 @@
 }
 
 .tutor__experience-list {
-  list-style: none;
   margin: 0 auto 20px;
-  padding-left: 0;
 }
 
 .tutor__experience-item {
@@ -53,7 +52,6 @@
 .tutor__education-list {
   position: relative;
   margin: 0 auto 16px;
-  padding-left: 0;
   padding-top: 25px;
 
   &::before {
@@ -71,7 +69,6 @@
 }
 
 .tutor__education-item {
-  list-style: none;
   font-family: $font-family;
   @include font(500, 12px, 20px);
   color: $color-text-light-2;
@@ -96,6 +93,7 @@
 @media screen and (min-width: $bp-tablet) {
   .tutor {
     padding-top: 302px;
+    scroll-margin-top: -174px;
   }
 
   .tutor__wrapper {
@@ -133,6 +131,7 @@
   .tutor {
     padding-top: 329px;
     padding-bottom: 65px;
+    scroll-margin-top: -201px;
   }
 
   .tutor__title {
