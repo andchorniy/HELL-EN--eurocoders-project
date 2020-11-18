@@ -345,6 +345,10 @@ p {
   margin: 0;
 }
 
+section {
+  scroll-margin-top: 90px;
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -411,7 +415,7 @@ p {
   display: block;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.7142857143;
+  line-height: 1.4285714286;
   letter-spacing: 0.08em;
   color: #111518;
 }
@@ -544,23 +548,6 @@ p {
     margin: auto 0;
   }
 }
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-button {
-  padding: 0;
-}
-
-section {
-  scroll-margin-top: 90px;
-}
-
 header {
   width: 100%;
   height: 90px;
@@ -1211,6 +1198,8 @@ header {
 .our-program {
   background-color: #111518;
   color: #ffffff;
+}
+.our-program > div {
   overflow: hidden;
 }
 .our-program h2 {
@@ -1295,34 +1284,34 @@ header {
   width: 176px;
   height: 137px;
   background-size: cover;
-  background-image: url(/bg-our-program-mobile.de5fa7f5.jpg);
+  background-image: url(/bg-our-program-mobile.f6dd888d.jpg);
   background-repeat: no-repeat;
   opacity: 0.5;
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .our-program .container::before {
-    background-image: url(/bg-our-program-mobile@2x.9e8f997e.jpg);
+    background-image: url(/bg-our-program-mobile@2x.58522431.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .our-program .container::before {
     width: 384px;
     height: 280px;
-    background-image: url(/bg-our-program-tablet.97a67db2.jpg);
+    background-image: url(/bg-our-program-tablet.f28f304c.jpg);
     bottom: 253px;
     right: 0;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .our-program .container::before {
-    background-image: url(/bg-our-program-tablet@2x.64d49dfe.jpg);
+    background-image: url(/bg-our-program-tablet@2x.78a1cafa.jpg);
   }
 }
 @media screen and (min-width: 1344px) {
   .our-program .container::before {
     width: 760px;
     height: 502px;
-    background-image: url(/bg-our-program-desktop.d6de6956.jpg);
+    background-image: url(/bg-our-program-desktop.1354c6eb.jpg);
     bottom: 59px;
     left: -260px;
     right: auto;
@@ -1330,7 +1319,7 @@ header {
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1344px), screen and (min-resolution: 192dpi) and (min-width: 1344px), screen and (min-resolution: 2dppx) and (min-width: 1344px) {
   .our-program .container::before {
-    background-image: url(/bg-our-program-desktop@2x.ebb21e82.jpg);
+    background-image: url(/bg-our-program-desktop@2x.adabe289.jpg);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1711,51 +1700,99 @@ header {
     line-height: 1.5555555556;
   }
 }
-.guarant {
-  padding-top: 50px;
+@media screen and (min-width: 320px) {
+  .guarant {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 1344px) {
+  .guarant {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
 }
 .guarant__remark {
   color: #ff6b09;
 }
 .guarant__list {
   background-color: #f1f1f1;
+  margin: 0px;
+}
+@media screen and (min-width: 320px) {
+  .guarant__list {
+    padding: 30px 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .guarant__list {
+    padding: 30px 50px 30px 79px;
+  }
+}
+@media screen and (min-width: 1344px) {
+  .guarant__list {
+    padding: 50px 112px 45px 112px;
+  }
 }
 .guarant__item {
   position: relative;
   display: flex;
   margin-bottom: 20px;
 }
-.guarant__svg {
-  position: absolute;
-  width: 14.5px;
-  height: 20px;
-  left: 0;
-  top: 0;
-  margin-left: -6.5px;
+@media screen and (min-width: 320px) {
+  .guarant__item {
+    margin-bottom: 23px;
+  }
 }
-.guarant__item:not(:last-child):before {
-  height: 68px;
-  transform: translatey(25px);
+.guarant__item::before {
   display: block;
   content: "";
+  background-image: url(/icon-fire.041d37c5.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 320px) {
+  .guarant__item::before {
+    width: 15px;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 1344px) {
+  .guarant__item::before {
+    width: 20px;
+    height: 30px;
+  }
+}
+.guarant__box-item {
+  width: calc(100% - 25px);
+  display: flex;
+}
+@media screen and (min-width: 1344px) {
+  .guarant__box-item {
+    width: calc(100% - 35px);
+  }
+}
+.guarant__item:not(:last-child)::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 26px;
+  left: 7.5px;
+  height: calc(100% - 8px);
   border-left: 1px dashed #b9b9b9;
 }
+@media screen and (min-width: 1344px) {
+  .guarant__item:not(:last-child)::after {
+    top: 34px;
+    left: 8px;
+    height: calc(100% - 20px);
+  }
+}
 .guarant__title {
-  font-weight: 800;
-  font-size: 46px;
-  line-height: 1.3043478261;
   text-align: center;
   letter-spacing: 0.03em;
   color: #111518;
 }
-.guarant__text {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.4;
-  margin-left: 20px;
-  color: #3d3d3d;
-}
-
 @media screen and (min-width: 320px) {
   .guarant__title {
     font-weight: 800;
@@ -1763,42 +1800,33 @@ header {
     line-height: 1.3076923077;
     margin-bottom: 30px;
   }
-
-  .guarant__list {
-    padding: 30px 20px;
-  }
-
-  .guarant__text {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.6666666667;
-  }
-
-  .guarant__item {
-    margin-bottom: 23px;
-  }
 }
 @media screen and (min-width: 1344px) {
-  .guarant {
-    padding-top: 65px;
-  }
-  .guarant__list {
-    padding: 30px 50px 30px 76px;
-  }
-  .guarant__item {
-    margin-bottom: 20px;
-  }
   .guarant__title {
     font-weight: 800;
     font-size: 46px;
     line-height: 1.3043478261;
   }
+}
+.guarant__text {
+  margin-left: 20px;
+  color: #3d3d3d;
+}
+@media screen and (min-width: 320px) {
+  .guarant__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6666666667;
+  }
+}
+@media screen and (min-width: 1344px) {
   .guarant__text {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.4;
   }
 }
+
 .students-review {
   padding: 25px 0 50px 0;
   text-align: center;
@@ -1855,6 +1883,7 @@ header {
 }
 .slick-track {
   display: flex;
+  align-items: flex-start;
 }
 
 .slider {
@@ -1874,7 +1903,10 @@ header {
 
 .thumbnail .slick-dots li {
   list-style: none;
-  margin: 0 5px;
+  margin: 0 auto;
+}
+.thumbnail .slick-dots li:not(:last-child) {
+  margin-right: 10px;
 }
 
 .thumbnail .slick-dots button {
