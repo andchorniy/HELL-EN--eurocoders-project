@@ -52,13 +52,6 @@
     }
   }
 }
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
 
 .hero__title {
   margin-bottom: 30px;
@@ -109,17 +102,11 @@ p {
   }
 }
 .hero__button {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 285px;
 
-  color: $color-accent;
-  font-family: $font-family;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.25;
   @media screen and (min-width: $bp-tablet) {
     margin: 0;
     margin-bottom: 143px;
@@ -131,7 +118,6 @@ p {
   }
 }
 .hero__advantages-list {
-  list-style: none;
   margin: 0;
   padding: 0;
   @media screen and (max-width: 767px) {
