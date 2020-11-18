@@ -284,6 +284,10 @@ summary {
   display: list-item;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: #111518;
@@ -1461,14 +1465,12 @@ header {
   .enum-section {
     transform: translateY(-487px);
   }
-}
-@media screen and (min-width: 320px) {
-  .enum-section {
-    transform: translateY(-487px);
-  }
   .enum-section .problems__title {
     width: auto;
     padding-right: 50px;
+  }
+  .enum-section .enumeration__list--item:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1478,6 +1480,9 @@ header {
   .enum-section .problems__title {
     padding-right: 0;
     text-align: center;
+  }
+  .enum-section .enumeration__list--item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1344px) {
