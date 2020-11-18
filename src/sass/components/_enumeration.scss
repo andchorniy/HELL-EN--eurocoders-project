@@ -20,7 +20,7 @@
 .enumeration__list--item {
   display: block;
 
-  @include font(700, 14px, 24px);
+  @include font(700, 14px, 20px);
   letter-spacing: 0.08em;
   color: $color-text-dark;
 
