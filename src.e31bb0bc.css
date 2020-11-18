@@ -962,6 +962,10 @@ header {
     max-width: 767px;
     width: 100%;
   }
+
+  .problems__br {
+    display: block;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1344px) {
   .problems {
@@ -975,6 +979,10 @@ header {
     font-weight: 800;
     font-size: 26px;
     line-height: 1.3076923077;
+  }
+
+  .problems__br {
+    display: block;
   }
 }
 @media screen and (min-width: 1344px) {
@@ -1022,13 +1030,11 @@ header {
 @media screen and (min-width: 320px) {
   .our-strategy {
     width: 100%;
-    max-width: 767px;
   }
 }
 @media screen and (min-width: 768px) {
   .our-strategy {
     padding-top: 210px;
-    max-width: 1344px;
     width: 100%;
   }
 }
@@ -1201,6 +1207,7 @@ header {
 .our-program {
   background-color: #111518;
   color: #ffffff;
+  overflow: hidden;
 }
 .our-program h2 {
   font-weight: 800;
@@ -1279,47 +1286,48 @@ header {
 }
 .our-program .container::before {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 440px;
+  right: -56px;
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 176px;
+  height: 137px;
+  background-size: cover;
   background-image: url(/bg-our-program-mobile.de5fa7f5.jpg);
   background-repeat: no-repeat;
-  background-position: 100% calc(100% - 440px);
   opacity: 0.5;
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .our-program .container::before {
     background-image: url(/bg-our-program-mobile@2x.9e8f997e.jpg);
-    background-size: 120px;
   }
 }
 @media screen and (min-width: 768px) {
   .our-program .container::before {
+    width: 384px;
+    height: 280px;
     background-image: url(/bg-our-program-tablet.97a67db2.jpg);
-    background-position: 100% calc(100% - 253px);
-    left: auto;
-    right: 40px;
+    bottom: 253px;
+    right: 0;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .our-program .container::before {
     background-image: url(/bg-our-program-tablet@2x.64d49dfe.jpg);
-    background-size: 384px;
   }
 }
 @media screen and (min-width: 1344px) {
   .our-program .container::before {
+    width: 760px;
+    height: 502px;
     background-image: url(/bg-our-program-desktop.d6de6956.jpg);
-    background-position: 0 calc(100% - 59px);
+    bottom: 59px;
     left: -260px;
+    right: auto;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1344px), screen and (min-resolution: 192dpi) and (min-width: 1344px), screen and (min-resolution: 2dppx) and (min-width: 1344px) {
   .our-program .container::before {
     background-image: url(/bg-our-program-desktop@2x.ebb21e82.jpg);
-    background-size: 672px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1495,6 +1503,7 @@ header {
 .tutor {
   padding-top: 270px;
   padding-bottom: 25px;
+  scroll-margin-top: -180px;
 }
 .tutor__title {
   margin: 0 auto 20px;
@@ -1529,9 +1538,7 @@ header {
 }
 
 .tutor__experience-list {
-  list-style: none;
   margin: 0 auto 20px;
-  padding-left: 0;
 }
 
 .tutor__experience-item {
@@ -1550,7 +1557,6 @@ header {
 .tutor__education-list {
   position: relative;
   margin: 0 auto 16px;
-  padding-left: 0;
   padding-top: 25px;
 }
 .tutor__education-list::before {
@@ -1568,7 +1574,6 @@ header {
 }
 
 .tutor__education-item {
-  list-style: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -1593,6 +1598,7 @@ header {
 @media screen and (min-width: 768px) {
   .tutor {
     padding-top: 302px;
+    scroll-margin-top: -174px;
   }
 
   .tutor__wrapper {
@@ -1633,6 +1639,7 @@ header {
   .tutor {
     padding-top: 329px;
     padding-bottom: 65px;
+    scroll-margin-top: -201px;
   }
 
   .tutor__title {
