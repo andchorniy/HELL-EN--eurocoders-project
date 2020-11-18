@@ -957,7 +957,7 @@ header {
   color: #ffffff;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .problems {
     max-width: 767px;
     width: 100%;
@@ -967,7 +967,7 @@ header {
     display: block;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1344px) {
+@media screen and (min-width: 768px) and (max-width: 1343px) {
   .problems {
     padding-top: 59.5px;
     padding-bottom: 176.5px;
@@ -1275,7 +1275,6 @@ header {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.65;
-    margin-top: 5px;
     margin-bottom: 10px;
   }
 }
@@ -2307,7 +2306,7 @@ header {
     padding-bottom: 40px;
   }
   .contacts__logo {
-    padding-right: 180px;
+    margin-right: 180px;
   }
   .contacts__tel {
     padding-right: 24px;
@@ -2344,7 +2343,7 @@ header {
     margin-right: 15px;
   }
   .contacts__logo {
-    padding-right: 290px;
+    margin-right: 290px;
   }
 }
 
