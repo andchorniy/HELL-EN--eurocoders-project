@@ -806,14 +806,6 @@ header {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
-
 .hero__title {
   margin-bottom: 30px;
   font-style: normal;
@@ -867,16 +859,10 @@ p {
 }
 
 .hero__button {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 285px;
-  color: #ff6b09;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.25;
 }
 @media screen and (min-width: 768px) {
   .hero__button {
@@ -893,7 +879,6 @@ p {
 }
 
 .hero__advantages-list {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -1307,6 +1292,7 @@ p {
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .our-program .container::before {
     background-image: url(/bg-our-program-mobile@2x.9e8f997e.jpg);
+    background-size: 120px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1320,6 +1306,7 @@ p {
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .our-program .container::before {
     background-image: url(/bg-our-program-tablet@2x.64d49dfe.jpg);
+    background-size: 384px;
   }
 }
 @media screen and (min-width: 1344px) {
@@ -1332,6 +1319,7 @@ p {
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1344px), screen and (min-resolution: 192dpi) and (min-width: 1344px), screen and (min-resolution: 2dppx) and (min-width: 1344px) {
   .our-program .container::before {
     background-image: url(/bg-our-program-desktop@2x.ebb21e82.jpg);
+    background-size: 672px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1401,7 +1389,7 @@ p {
 }
 @media screen and (min-width: 1344px) {
   .our-program__semester-list-item {
-    flex-basis: calc((100% - 120px)/5);
+    flex-basis: calc((100% - 120px) / 5);
     justify-content: space-between;
     padding-left: 0;
   }
@@ -1454,7 +1442,7 @@ p {
     flex-flow: row nowrap;
   }
   .our-program__topic-list-item {
-    flex-basis: calc((100% - 100px)/3);
+    flex-basis: calc((100% - 100px) / 3);
     justify-content: space-between;
   }
   .our-program__topic-list-item:not(:last-child) {
