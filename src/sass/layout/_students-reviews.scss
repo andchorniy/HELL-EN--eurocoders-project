@@ -47,6 +47,7 @@
     /* Лента слайдов */
     &-track{
         display: flex;
+        align-items: flex-start;
     }
 }
 .slider{
@@ -65,8 +66,15 @@
 }
 .thumbnail .slick-dots li{
     list-style: none;
-    margin: 0 5px;
+    margin: 0 auto;
+
+    &:not(:last-child){
+        margin-right: 10px;
+    }
 }
+
+
+
 .thumbnail .slick-dots button{
     font-size: 0;
     width: 54px;

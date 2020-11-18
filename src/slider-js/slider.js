@@ -6,6 +6,7 @@ $(document).ready(function(){
         pauseOnHover: true,
         slidesToShow: 1,
         centerMode: true,
+        adaptiveHeight: true,
         waitForAnimate: false,
         focusOnSelect: true,
         fade: true,
