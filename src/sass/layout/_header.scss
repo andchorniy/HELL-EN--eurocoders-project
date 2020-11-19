@@ -28,7 +28,7 @@ header {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   background: rgba(17, 21, 24, 0.9);
   @include transition(all);
 }
@@ -75,7 +75,7 @@ header {
   color: $color-text-light;
   @include transition(color);
   &:hover,
-  & :focus {
+  &:focus {
     color: $color-accent;
   }
 }
