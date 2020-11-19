@@ -990,7 +990,7 @@ header {
     fill: #3d3d3d;
     width: 398px;
     height: 472px;
-    background-image: url(/Campfire.0cc14651.svg);
+    background-image: url(/bg-sprite.0e0c635f.svg#icon-campfire);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -1462,6 +1462,11 @@ header {
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width: 320px) and (min-width: 320px) {
+  .enum-section .enumeration__list--item::before {
+    margin-bottom: 10px;
+  }
+}
 @media screen and (min-width: 768px) {
   .enum-section {
     transform: translateY(-205px);
@@ -1490,6 +1495,11 @@ header {
   }
   .enum-section .enumeration__list--item {
     width: 356px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .enum-section .problems__br {
+    display: block;
   }
 }
 
@@ -1546,6 +1556,20 @@ header {
 .tutor__experience-item:not(:last-child) {
   margin-bottom: 24px;
 }
+.tutor__experience-item::before {
+  content: "";
+  display: inline-block;
+  background-image: url(/bg-sprite.0e0c635f.svg#icon-check-mark);
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 14px;
+}
+@media screen and (min-width: 1344px) {
+  .tutor__experience-item::before {
+    width: 24.4px;
+    height: 20px;
+  }
+}
 
 .tutor__education-list {
   position: relative;
@@ -1564,6 +1588,12 @@ header {
 
 .tutor__experience-text {
   margin-left: 9px;
+  width: 100%;
+}
+@media screen and (min-width: 1344px) {
+  .tutor__experience-text {
+    width: calc(100% - 59px);
+  }
 }
 
 .tutor__education-item {
@@ -1737,18 +1767,17 @@ header {
 .guarant__item {
   position: relative;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 768px) {
   .guarant__item {
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 }
 .guarant__item::before {
   display: block;
   content: "";
-  background-image: url(/icon-fire.041d37c5.svg);
-  background-size: contain;
+  background-image: url(/bg-sprite.0e0c635f.svg#icon-fire);
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 320px) {
@@ -1759,7 +1788,7 @@ header {
 }
 @media screen and (min-width: 1344px) {
   .guarant__item::before {
-    width: 20px;
+    width: 22px;
     height: 30px;
   }
 }
@@ -1778,13 +1807,13 @@ header {
   content: "";
   top: 26px;
   left: 7.5px;
-  height: calc(100% - 8px);
+  height: calc(100% - 10px);
   border-left: 1px dashed #b9b9b9;
 }
 @media screen and (min-width: 1344px) {
   .guarant__item:not(:last-child)::after {
     top: 34px;
-    left: 8px;
+    left: 11px;
     height: calc(100% - 20px);
   }
 }
