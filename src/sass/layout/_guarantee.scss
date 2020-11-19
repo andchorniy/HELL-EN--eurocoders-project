@@ -26,24 +26,23 @@
   &__item {
     position: relative;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 23px;
 
-    @media screen and (min-width: $bp-mobile) {
-      margin-bottom: 23px;
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 20px;
     }
   }
   &__item::before {
     display: block;
     content: '';
-    background-image: url(../images/svg/icon-fire.svg);
-    background-size: contain;
+    background-image: url(../images/svg/bg-sprite.svg#icon-fire);
     background-repeat: no-repeat;
     @media screen and (min-width: $bp-mobile) {
       width: 15px;
       height: 20px;
     }
     @media screen and (min-width: $bp-desktop) {
-      width: 20px;
+      width: 22px;
       height: 30px;
     }
   }
@@ -60,12 +59,12 @@
     content: '';
     top: 26px;
     left: 7.5px;
-    height: calc(100% - 8px);
+    height: calc(100% - 10px);
     border-left: 1px dashed $color-text-light-2;
 
     @media screen and (min-width: $bp-desktop) {
       top: 34px;
-      left: 8px;
+      left: 11px;
       height: calc(100% - 20px);
     }
   }
