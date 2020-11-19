@@ -268,6 +268,12 @@
             &--item:not(:last-child) {
                 margin-bottom: 20px;
             }
+
+            @media screen and (min-width: $bp-mobile) {
+                &--item::before {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
   }
@@ -309,4 +315,11 @@
       }
     }
   }
+
+  @media screen and (min-width: $bp-mobile) and (max-width: 767px) {
+
+    .problems__br {
+        display: block;
+    }
+  } 
 }
