@@ -581,7 +581,7 @@ header {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  overflow-y: auto;
+  overflow-y: hidden;
   background: rgba(17, 21, 24, 0.9);
   transition: all 250ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
@@ -1995,12 +1995,14 @@ header {
 .slider .slick-arrow.slick-prev {
   left: 24px;
   background: url(/Arrow-prev.33460a71.svg) 100% no-repeat;
+  outline: none;
 }
 
 /* Стрелка вправо */
 .slider .slick-arrow.slick-next {
   right: 24px;
   background: url(/Arrow-next.fbd30b2f.svg) 100% no-repeat;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
