@@ -117,7 +117,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"slider-js/slider.js":[function(require,module,exports) {
+})({"slider.js":[function(require,module,exports) {
+////////////////// Slider /////////////////
 $(document).ready(function () {
   $('.slider').slick({
     dots: true,
@@ -136,7 +137,26 @@ $(document).ready(function () {
       settings: {}
     }]
   });
-});
+}); ////////////////////////////////////////////
+//////////////   MENU //////////////////////
+
+(function () {
+  var refs = {
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
+    header: document.querySelector('header')
+  };
+  refs.header.addEventListener('click', toggleModal);
+
+  function toggleModal(e) {
+    if (e.target.closest('button') === refs.openModalBtn || e.target.closest('button') === refs.closeModalBtn) {
+      refs.modal.classList.toggle('is-hidden');
+    } else if (e.target.href) {
+      refs.modal.classList.add('is-hidden');
+    }
+  }
+})(); ////////////////////////////////
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -165,7 +185,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52058" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53846" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -341,5 +361,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","slider-js/slider.js"], null)
-//# sourceMappingURL=/slider.73186276.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","slider.js"], null)
+//# sourceMappingURL=/slider.ab09d017.js.map
