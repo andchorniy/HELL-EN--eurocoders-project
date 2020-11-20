@@ -2,7 +2,6 @@
     padding: 25px 0 50px 0;
     text-align: center;
     min-width: 320px;
-   
 
     &__section-title{
         @include font (800, 20px, 26px);
@@ -53,7 +52,6 @@
 .slider{
     box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
     margin-bottom: 20px;
-
 }
 /* Точки (булиты) */
 .thumbnail .slick-dots{
@@ -72,8 +70,6 @@
         margin-right: 10px;
     }
 }
-
-
 
 .thumbnail .slick-dots button{
     font-size: 0;
@@ -104,7 +100,6 @@
         background: url(../images/students-reviews/student-7.jpg) 100% no-repeat;
     }
 }
-
 /* Активная точка */
 .thumbnail .slick-dots li.slick-active button {
     border: 1px solid $color-accent;
@@ -117,10 +112,9 @@
 .slider .slick-arrow{
     position: absolute;
     bottom: 8px;
-    margin: 0;
     z-index: 90;
     font-size: 0;
-    width: 25px;
+    width: 27px;
     height: 26px;
     border: none;
 }
@@ -128,11 +122,11 @@
 /* Стрелка влево */
 .slider .slick-arrow.slick-prev{
     left: 24px;
-    background: url(../images/students-reviews/Arrow-prev.svg) 100% no-repeat;
+    background: url(../images/students-reviews/arrow-prev.svg) 100% no-repeat;
 }
 /* Стрелка вправо */
 .slider .slick-arrow.slick-next{
-    right:24px;
+    right: 24px;
     background: url(../images/students-reviews/Arrow-next.svg) 100% no-repeat;
 }
 
