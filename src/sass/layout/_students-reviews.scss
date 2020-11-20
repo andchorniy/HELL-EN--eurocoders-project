@@ -123,11 +123,13 @@
 .slider .slick-arrow.slick-prev{
     left: 24px;
     background: url(../images/students-reviews/Arrow-prev.svg) 100% no-repeat;
+    outline: none;
 }
 /* Стрелка вправо */
 .slider .slick-arrow.slick-next{
     right: 24px;
     background: url(../images/students-reviews/Arrow-next.svg) 100% no-repeat;
+    outline: none;
 }
 
 @media screen and (min-width: $bp-tablet){
