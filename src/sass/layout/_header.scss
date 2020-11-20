@@ -28,7 +28,7 @@ header {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  overflow-y: auto;
+  overflow-y: hidden;
   background: rgba(17, 21, 24, 0.9);
   @include transition(all);
 }
